@@ -4,7 +4,7 @@ Use all the power of TS's type system in .js files!
 
 Must use valid JS syntax, so type annotations are done with JSDoc syntax instead of TS syntax.
 
-```
+```js
 /**
  * @param a {number}
  * @param b {string | undefined}
@@ -18,7 +18,7 @@ function foo(a, b, c) {
 
 corresponds to
 
-```
+```ts
 import { SomeType } from "some-library";
 
 function foo(
