@@ -4,15 +4,49 @@ Use all the power of TS's type system in .js files!
 
 Must use valid JS syntax, so type annotations are done with JSDoc syntax instead of TS syntax.
 
+```
+/**
+ * @param a {number}
+ * @param b {string | undefined}
+ * @param c {import("some-library").SomeType}
+ * @returns {Promise<void>}
+ */
+function foo(a, b, c) {
+  // ...
+}
+```
+
+corresponds to
+
+```
+import { SomeType } from "some-library";
+
+function foo(
+  a: number,
+  b: string | undefined,
+  c: SomeType
+): Promise<void> {
+  // ...
+}
+```
+
+## Why?
+
 Pros and cons:
 
 - ✅ No build step
 - ✅ Easy setup
 - ❌ Verbose syntax
 
-----
+When might you use this? e.g.:
 
-The documentation is pretty good!
+- Quick one-off scripts
+- Environments that allow you to use custom JS code but you don't have full control over (i.e. you can't add a build step)
+- Existing JS code
+
+## The documentation
+
+...is pretty good!
 
 ["JSDoc Reference"](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html) is a good reference for types syntax.
 
