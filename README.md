@@ -70,7 +70,7 @@ printf "let x = 1;\nx = 'two';" > index.js
   - Add `"files": ["./index.js"]`
 
 - Run tsc and notice you get a type error! `npx tsc --noEmit`
-  - Alternatively, open in your favorite editor to see errors! (Can confirm: It works in WebStorm)
+  - Alternatively, open in your favorite editor/IDE to see errors! (Works in WebStorm with no config, probably others too.)
 
 ## Syntax basics
 
